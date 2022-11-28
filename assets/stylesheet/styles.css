@@ -450,12 +450,12 @@ body div.page-container nav.page-header-nav-menu ul.page-header-nav-menu-list li
 }
 
 @media only screen and (min-width: 769px) {
-  body div.page-container nav.page-header-nav-menu ul.page-header-nav-menu-list li.page-header-nav-menu-list-item:hover div.page-header-nav-menu-list-item-dialog {
-    opacity: 1;
-    display: flex;
-    transform: translateX(0%) scale(1);
-    left: 0px;
-    widows: inherit;
+  body div.page-container nav.page-header-nav-menu ul.page-header-nav-menu-list li.page-header-nav-menu-list-item div.page-header-nav-menu-list-item-dialog.visible {
+    opacity: 1 !important;
+    display: flex !important;
+    transform: translateX(0%) scale(1) !important;
+    left: 0px !important;
+    widows: inherit !important;
   }
 
   body div.page-container nav.page-header-nav-menu ul.page-header-nav-menu-list li.page-header-nav-menu-list-item div.page-header-nav-menu-list-item-dialog {
@@ -470,7 +470,7 @@ body div.page-container nav.page-header-nav-menu ul.page-header-nav-menu-list li
     border-radius: .35714rem;
     margin: auto;
     height: auto;
-    pointer-events: none;
+    transition: all .4 linear;
     left: 50%;
     transform-origin: center top;
     transform: translateX(-50%) scale(0);
