@@ -149,6 +149,7 @@
         buttons.forEach(function (button) {
           if (button[0]) {
             button[0].addEventListener('click', function (event) {
+              event.preventDefault()
               moveCarousel.apply(this, [button[1]])
             })
           }
@@ -191,6 +192,43 @@
       })
     }
   })
+
+  __n(/* DropDown */ function () {
+    const dropDownElements = document.querySelectorAll('[data-dropdown]')
+
+    if (dropDownElements.length >= 0) {
+      window.addEventListener('scroll', function () {
+        dropDownElements.forEach(function (dropDownElement) {
+          const body = getContainerElementChild('data-dropdown-body', dropDownElement)
+
+          body.classList.remove('show')
+        })
+      })
+
+      dropDownElements.forEach(function (dropDownElement) {
+        const body = getContainerElementChild('data-dropdown-body', dropDownElement)
+        const button = getContainerElementChild('data-dropdown-button', dropDownElement)
+
+        if (!(button && body)) {
+          return;
+        }
+
+        button.tabIndex = 1
+
+        button.addEventListener('click', function (event) {
+          event.preventDefault()
+
+          body.classList.toggle('show')
+        })
+
+        function dropdownHideHandler() {
+          setTimeout(function () {
+            body.classList.remove('show')
+          }, 150)
+        }
+
+        button.addEventListener('blur', dropdownHideHandler)
+      })
+    }
+  })
 }())
-
-

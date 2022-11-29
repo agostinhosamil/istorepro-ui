@@ -47,8 +47,8 @@
                   </div>
                 </a>
               </li>
-              <li class="light">
-                <a href="#">
+              <li class="light" data-dropdown>
+                <a href="#" data-dropdown-button>
                   <div>
                     <i class="material-symbols-outlined">local_shipping</i>
                   </div>
@@ -56,9 +56,18 @@
                     Rastreio
                   </span>
                 </a>
+                <div data-dropdown-body>
+                  <main>
+                    <h1>Rastreie seu pedido</h1>
+                    <p>Informe seu código de rastreio:</p>
+                  </main>
+                  <footer>
+                    InputText
+                  </footer>
+                </div>
               </li>
-              <li class="dark">
-                <a href="#">
+              <li class="dark" data-dropdown>
+                <a href="#" data-dropdown-button>
                   <div>
                     <i class="material-symbols-outlined">person</i>
                   </div>
@@ -66,9 +75,12 @@
                     Minha Conta
                   </span>
                 </a>
+                <div data-dropdown-body>
+                  Minha Conta
+                </div>
               </li>
-              <li class="dark">
-                <a href="#">
+              <li class="dark" data-dropdown>
+                <a href="#" data-dropdown-button>
                   <div>
                     <i class="material-symbols-outlined">shopping_cart</i>
                   </div>
@@ -76,6 +88,9 @@
                     0
                   </span>
                 </a>
+                <div data-dropdown-body>
+                  Carrinho de Compras
+                </div>
               </li>
               <li class="light mobile">
                 <a href="#">
@@ -1373,7 +1388,7 @@
             </ul>
           </div>
           <div class="page-footer-company-open-dates">
-            <span class="material-symbols-outlined">schedule</span>
+            <i class="material-symbols-outlined">schedule</i>
             <span>De Segunda a Sexta das 08:00 ás 17:00 e aos Sábados das 08:00 ao 12:00.</span>
           </div>
           <div class="page-footer-store-payment-data">
